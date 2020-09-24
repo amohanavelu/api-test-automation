@@ -1,0 +1,48 @@
+[
+  {
+    "validate_books": {
+      "books": [
+        "The Fellowship Of The Ring",
+        "The Two Towers",
+        "The Return Of The King"
+      ],
+      "response_code": 200,
+      "total": 3,
+      "limit": 1000,
+      "offset_default": 0,
+      "page": 1,
+      "pages": 1
+    },
+    "validate_movie_default_other_params": {
+      "total": 8,
+      "limit": 1000,
+      "offset": 0,
+      "page": 1,
+      "pages": 1
+    },
+    "validate_movie_unauthorized": {
+      "invalid_auth": "XXXXX",
+      "response_code": 401,
+      "success": false,
+      "message": "Unauthorized."
+    },
+    "validate_movie_invalid_path": {
+      "invalid_path": ["/movie/FSFSFS", "/movieCC"],
+      "response_code": [500, 404]
+    },
+    "validate_movie_invalid_offset": {
+      "params": "offset=-1",
+      "response_code": 500,
+      "success": false,
+      "message": "Something went wrong."
+    },
+    "validate_movie_quotes": {
+      "movie_names": [
+        "The Fellowship of the Ring",
+        "The Return of the King",
+        "The Two Towers "
+      ],
+      "quote_total": [507, 873, 1010]
+    }
+  }
+]
