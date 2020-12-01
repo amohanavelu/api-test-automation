@@ -26,9 +26,9 @@
       "success": false,
       "message": "Unauthorized."
     },
-    "validate_movie_invalid_path": {
-      "invalid_path": ["/movie/FSFSFS", "/movieCC"],
-      "response_code": [500, 404]
+    "validate_movie_path": {
+      "invalid_path": ["/movie/FSFSFS", "/movieCC", "/movie"],
+      "response_code": [500, 404, 200]
     },
     "validate_movie_invalid_offset": {
       "params": "offset=-1",

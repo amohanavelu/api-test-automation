@@ -1,6 +1,6 @@
 var apihelper = require("../utils/apihelper");
 apihelper = new apihelper();
-const config = require("../../resources/config.json.js");
+const config = require("../../resources/config.json");
 let api_uri = config.api_uri;
 
 class book {

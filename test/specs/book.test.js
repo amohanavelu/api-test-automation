@@ -1,8 +1,8 @@
 var expect = require("chai").expect;
 var chai = require("chai");
 var apihelper = require("../utils/apihelper");
-var jsontestdata = require("../../resources/testdata.json.js");
-const config = require("../../resources/config.json.js");
+var jsontestdata = require("../../resources/testdata.json");
+const config = require("../../resources/config.json");
 var book = require("../apiwrappers/book");
 
 // var env = require("minimist")(process.argv.slice(2)).env;

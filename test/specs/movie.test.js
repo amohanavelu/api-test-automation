@@ -1,7 +1,7 @@
 var expect = require("chai").expect;
 var apihelper = require("../utils/apihelper");
-var jsontestdata = require("../../resources/testdata.json.js");
-var config = require("../../resources/config.json.js");
+var jsontestdata = require("../../resources/testdata.json");
+var config = require("../../resources/config.json");
 var movie = require("../apiwrappers/movie");
 
 apihelper = new apihelper();

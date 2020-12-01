@@ -1,6 +1,6 @@
 var apihelper = require("../utils/apihelper");
 apihelper = new apihelper();
-const config = require("../../resources/config.json.js");
+const config = require("../../resources/config.json");
 const fetch = require("node-fetch");
 let api_uri = config.api_uri;
 let token_from_config = config.api_key;
