@@ -6,8 +6,9 @@
   "scripts": {
     "pretest": "rm -rf allure-results",
     "test": "npm-run-all -r -p test:*",
-    "test:mocha": "sleep 1 && multi='progress=- mocha-allure-reporter=-' mocha ./all-tests.js",
-    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+    "test:mocha": "sleep 1 && multi='progress=- mocha-allure-reporter=-' mocha ./all-tests.js; exit 0",
+    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "posttest": "allure generate allure-results --clean -o allure-report"
   },
   "keywords": [],
   "author": "Arun M",

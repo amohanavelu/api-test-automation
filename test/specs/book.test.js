@@ -23,7 +23,7 @@ describe("#1 - VALIDATE BOOK API", function () {
    * #7 - Book Names
    */
 
-  it("validate_books", async function () {
+  it.only("validate_books", async function () {
     this.timeout(80000);
     var testname = this.test.title;
     apihelper.log(`Running test cases --- ${this.test.title}`);

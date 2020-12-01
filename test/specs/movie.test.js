@@ -13,14 +13,14 @@ describe("#2 - VALIDATE MOVIE API - POSITIVE CASES", function () {
    * Test Cases :
    * #1 - Validate response code
    */
-  it("validate_movie_response_code", async function () {
+  it.only("validate_movie_response_code", async function () {
     this.timeout(80000);
 
     apihelper.log(`Running test cases --- ${this.test.title}`);
 
     let response = await movie.getMovie();
     let response_code = response[0];
-    expect(response_code).to.equal(200);
+    expect(response_code).to.equal(201);
   });
 
   /**
