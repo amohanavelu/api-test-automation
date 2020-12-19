@@ -1,2 +1,2 @@
-require("./test/specs/book.test");
-require("./test/specs/movie.test");
+require("./test/specs/location.test");
+// require("./test/specs/movie.test");

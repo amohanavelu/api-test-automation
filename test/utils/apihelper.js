@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
 require("mocha-allure-reporter");
+let encode = require("base-64");
 
 class apihelper {
   /**
@@ -9,15 +10,26 @@ class apihelper {
    * @param {headers} headers http headers of a API
    * @return {jsonResponse} JSON response of post API.
    */
-  async post(url, body, headers) {
+  async post(url, body) {
+    let username = "test-hiring/personnel/api-test";
+    let password = "b67a-49f1$";
+    var myHeaders = new fetch.Headers();
+
+    myHeaders.append(
+      "Authorization",
+      "Basic " + Buffer.from(username + ":" + password).toString("base64")
+    );
+    myHeaders.append("Content-Type", "application/json");
+    // console.log("request body", JSON.stringify(body));
+
     const response = await fetch(url, {
       method: "POST",
       body: JSON.stringify(body),
-      headers: headers,
+      headers: myHeaders,
     });
-    console.log("Response -- ", response);
+    // console.log("Response -- ", response);
     const jsonResponse = await response.json();
-    return [jsonResponse, response.status];
+    return [response.status, jsonResponse];
   }
 
   /**

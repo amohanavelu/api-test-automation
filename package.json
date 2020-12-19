@@ -23,6 +23,8 @@
     "npm-run-all": "^4.0.2"
   },
   "dependencies": {
+    "base-64": "^1.0.0",
+    "btoa": "^1.2.1",
     "log4js": "^6.3.0",
     "node-fetch": "^2.6.1"
   }
